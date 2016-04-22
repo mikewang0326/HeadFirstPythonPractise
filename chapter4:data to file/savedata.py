@@ -37,20 +37,28 @@ os.chdir('../output')
 
 os.getcwd()
 
-out_provices = open('provices.data', 'w')
+try:
 
-out_citys = open('citys.data', 'w')
+    out_provices = open('provices.data', 'w')
 
-'''
-    connect strings like this
-'''
-print('my', 'provices = ', provices, end="", file=out_provices)
-print('\n')
-print('my', 'citys = ', citys, end="", file=out_citys)
+    out_citys = open('citys.data', 'w')
 
-out_provices.close()
-out_citys.close()
+    out_provices.close()
 
-print('python execute finished')
+    '''
+        connect strings like this
+    '''
+    print('my', 'provices = ', provices, end="", file=out_provices)
+    print('\n')
+    print('my', 'citys = ', citys, end="", file=out_citys)
+
+except Exception:
+    print('Exception')
+
+finally:
+    out_provices.close()
+    out_citys.close()
+
+    print('python execute finished')
 
 
