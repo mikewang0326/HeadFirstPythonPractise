@@ -4,7 +4,7 @@ print("path " + os.path.abspath('.'))
 
 os.getcwd()
 
-os.chdir('./files')
+os.chdir('../files')
 
 os.getcwd()
 
