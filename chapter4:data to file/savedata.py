@@ -1,5 +1,13 @@
 import os
 
+print("path " + os.path.abspath('.'))
+
+os.getcwd()
+
+os.chdir('../files')
+
+os.getcwd()
+
 provices = []
 citys = []
 
@@ -18,15 +26,31 @@ if os.path.exists('city_list_4.txt'):
         except:
             print("in except")
         pass
-    '''
-    connect strings like this
-    '''
-    print('my', 'provices = ', provices, end="")
-    print('\n')
-    print('my', 'citys = ', citys, end="")
+
     data.close()
 
 else:
     print('no file exist')
+
+
+os.chdir('../output')
+
+os.getcwd()
+
+out_provices = open('provices.data', 'w')
+
+out_citys = open('citys.data', 'w')
+
+'''
+    connect strings like this
+'''
+print('my', 'provices = ', provices, end="", file=out_provices)
+print('\n')
+print('my', 'citys = ', citys, end="", file=out_citys)
+
+out_provices.close()
+out_citys.close()
+
+print('python execute finished')
 
 
