@@ -40,7 +40,6 @@ os.getcwd()
 try:
 
     out_provices = open('provices.data', 'w')
-
     out_citys = open('citys.data', 'w')
 
     out_provices.close()
