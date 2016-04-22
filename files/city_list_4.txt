@@ -1,0 +1,8 @@
+beijing:beijing
+shanghai:shanghai
+shanxi:xian
+gansu:anzhou
+hainan:haikou
+hainan:sanya
+taiwan:taipei
+yunnan:lijiang

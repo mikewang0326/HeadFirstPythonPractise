@@ -8,8 +8,8 @@ os.chdir('../files')
 
 os.getcwd()
 
-if os.path.exists('city_list.txt'):
-    data = open('city_list.txt')
+if os.path.exists('city_list_3.txt'):
+    data = open('city_list_3.txt')
 
     print(data.readline(), end='')
 
