@@ -27,6 +27,9 @@ pickle提供的是data save interface
 
 通过dump保存数据,通过load加载数据
 
+
+pickle负责你的文件io细节
+
 '''
 
 
