@@ -30,7 +30,7 @@ if os.path.exists('james.txt'):
         cleaned_james.append(sanitize(each))
     print('clean_james ', cleaned_james)
 
-    '''列表推导'''
+    '''列表推导 list comprehension '''
     quick_clean_james = [sanitize(each_t) for each_t in james]
     print('quick_clean_james', quick_clean_james)
 
