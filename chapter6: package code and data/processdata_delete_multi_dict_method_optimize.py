@@ -39,6 +39,8 @@ def get_coach_data(filename):
 
 sarah_data = get_coach_data('sarah2.txt')
 
-print('sarah_name = ', sarah_data['name'])
-print('sarah_dob = ', sarah_data['dob'])
-print('fast time  = ', sarah_data['time'])
+def printInfo(info):
+    print("info", info['name'], "--", info['dob'], '--', info['time'])
+
+printInfo(sarah_data)
+
