@@ -14,6 +14,15 @@ class Athlete:
         self.dob = a_dob
         self.time = a_time
 
+    def addTime(self, _time):
+        self.time.append(_time)
+
+    def addTimes(self, _time=[]):
+        self.time.extend(_time)
+
+    def top3(self):
+        return (sorted(set([sanitize(t) for t in self.time]))[0:3])
+
 def sanitize(time_string):
     if ("-" in time_string):
         splitter = '-'
@@ -43,10 +52,21 @@ def get_coach_data(filename):
 
     return Athlete(temp.pop(0), temp.pop(0), str(sorted(set([sanitize(t) for t in temp]))[0:3]))
 
-sarah_data = get_coach_data('sarah2.txt')
 
 def printInfo(athlete):
     print("info", athlete.name, "--", athlete.dob, '--', athlete.time)
+
+sarah_data = get_coach_data('sarah2.txt')
+
+test = Athlete('Mike')
+test.addTime('6.89')
+test.addTime('9.23')
+test.addTimes(['1.25', '3.45'])
+printInfo(test)
+
+print('top3 = ', test.top3())
+
+# sarah_data.addTime('6.89')
 
 printInfo(sarah_data)
 
